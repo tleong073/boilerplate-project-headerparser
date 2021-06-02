@@ -4,7 +4,7 @@ const router = express.Router();
 router.get('/whoami',(req,res) => {
     console.log( req);
     res.json({
-        ipaddress: req.headers.ipaddress,
+        ipaddress: req.ip,
         language: req.headers['accept-language'],
         software: req.headers['user-agent']
     });
